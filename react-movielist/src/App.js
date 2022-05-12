@@ -9,9 +9,14 @@ function App() {
     rating: 5
   }]);
 
-  const addMovie = (title, rating) => {
-    console.log(title);
-    console.log(rating);
+  const addMovie = (inTitle, inRating) => {
+    const newId = movies.length > 0 ? movies[movies.length - 1].id +1 : 1;
+
+    setMovies([...movies, {
+      id: newId,
+      title: inTitle,
+      rating: inRating
+    } ])
   }
 
   return (
