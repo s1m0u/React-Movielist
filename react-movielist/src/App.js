@@ -1,3 +1,5 @@
+import MovieForm from "./MovieForm";
+
 function App() {
   return (
     <div className="App">
@@ -6,7 +8,7 @@ function App() {
       <hr></hr>
 
       {/* Form */}
-
+      <MovieForm />
       {/* List */}
 
     </div>
