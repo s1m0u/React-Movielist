@@ -3,7 +3,6 @@ import MovieForm from "./MovieForm";
 import MovieList from "./MovieList";
 
 function App() {
-
   const [movies, setMovies] = useState([{
     id: 1,
     title: "Star Wars",
@@ -24,7 +23,7 @@ function App() {
       {/* Form */}
       <MovieForm addMovie={addMovie} />
       {/* List */}
-      <MovieList />
+      <MovieList movies={movies} />
     </div>
   );
 }
