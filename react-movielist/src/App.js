@@ -23,10 +23,13 @@ function App() {
     <div className="App">
       <h1>Min Filmlista</h1>
       <h3>Lägg till en film</h3>
-      <hr></hr>
+      <hr />
 
       {/* Form */}
       <MovieForm addMovie={addMovie} />
+
+      <hr />
+
       {/* List */}
       <MovieList movies={movies} />
     </div>
