@@ -20,11 +20,17 @@ export default function MovieForm(props) {
             </select>
 
             <button className='btn btn-success mt-3' onClick={() => {
-                props.addMovie(inputRef.current.value, dropDownRef.current.value);
 
-                {/* Clear input */}
-                inputRef.current.value = "";
-                dropDownRef.current.value = 0;
+                if(inputRef.current.value && dropDownRef.current.value != 0)
+                {
+                    props.addMovie(inputRef.current.value, dropDownRef.current.value);
+                                    
+                    {/* Clear input */}
+                    inputRef.current.value = "";
+                    dropDownRef.current.value = 0;
+                }else{
+                    alert("Både titel och betyg måste fyllas i!")
+                }
 
             } }>Spara film</button>
         </div>
