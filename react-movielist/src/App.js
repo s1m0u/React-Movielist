@@ -19,6 +19,10 @@ function App() {
     } ])
   }
 
+  function deleteMovie (inId) {
+    setMovies(movies.filter((movie) => movie.id != inId));
+  }
+
   return (
     <div className="App">
       <h1>Min Filmlista</h1>
@@ -31,7 +35,7 @@ function App() {
       <hr />
 
       {/* List */}
-      <MovieList movies={movies} />
+      <MovieList movies={movies} deleteMovie={deleteMovie} />
     </div>
   );
 }

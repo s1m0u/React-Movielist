@@ -15,7 +15,7 @@ export default function MovieListItem(props) {
         <div>
             <li className='list-group-item list-group-item-secondary'>
                 {props.item.title}
-                <img src={Delete} />
+                <img src={Delete} className='delete-movie-icon' onClick={() => {props.deleteMovie(props.item.id)}} />
                 {stars}
             </li>
         </div>

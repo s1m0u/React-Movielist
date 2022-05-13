@@ -8,7 +8,7 @@ export default function MovieList(props) {
         <div>
             <h1>Inlagda filmer</h1>
             <ul className='list-group'>
-                {movies.map(movie => <MovieListItem key={movie.id} item={movie}/>)}
+                {movies.map(movie => <MovieListItem key={movie.id} item={movie} deleteMovie={props.deleteMovie}/>)}
             </ul>
         </div>
     )
