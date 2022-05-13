@@ -10,6 +10,8 @@ export default function MovieList(props) {
             <ul className='list-group'>
                 {movies.map(movie => <MovieListItem key={movie.id} item={movie} deleteMovie={props.deleteMovie}/>)}
             </ul>
+
+            <button type="button" class="btn btn-primary" onClick={() => {props.alphabeticalSort()}}>Alfabetsik ordning</button>
         </div>
     )
 };
