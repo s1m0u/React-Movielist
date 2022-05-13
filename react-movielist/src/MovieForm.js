@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 export default function MovieForm(props) {
 
     const inputRef = useRef();
@@ -25,7 +25,6 @@ export default function MovieForm(props) {
                 {
                     props.addMovie(inputRef.current.value, dropDownRef.current.value);
                                     
-                    {/* Clear input */}
                     inputRef.current.value = "";
                     dropDownRef.current.value = 0;
                 }else{

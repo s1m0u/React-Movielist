@@ -5,7 +5,7 @@ import MovieList from "./MovieList";
 function App() {
   const [movies, setMovies] = useState([]);
 
-  function addMovie (inTitle, inRating){
+  function addMovie(inTitle, inRating){
     const newId = movies.length > 0 ? movies[movies.length - 1].id +1 : 1;
 
     setMovies([...movies, {
@@ -15,7 +15,7 @@ function App() {
     } ])
   }
 
-  function deleteMovie (inId) {
+  function deleteMovie(inId){
     setMovies(movies.filter((movie) => movie.id != inId));
   }
 
