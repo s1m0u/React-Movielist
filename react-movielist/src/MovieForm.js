@@ -11,12 +11,12 @@ export default function MovieForm(props) {
         
             <label><strong>Betyg:</strong></label>
             <select class="form-control" ref={dropDownRef}>
-                <option selected='selected'>Välj betyg här...</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value={0} selected='selected'>Välj betyg här...</option>
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+                <option value={5}>5</option>
             </select>
 
             <button className='btn btn-success mt-3' onClick={() => props.addMovie(inputRef.current.value, dropDownRef.current.value)}>Spara film</button>
