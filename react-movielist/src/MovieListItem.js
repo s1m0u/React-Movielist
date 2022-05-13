@@ -1,10 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Star from './star.png';
 import Delete from './delete.png';
 import './style.css';
 
 export default function MovieListItem(props) {
-
     const stars = [];
 
     for (let i = 0; i < props.item.rating; i++) {
