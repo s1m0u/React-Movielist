@@ -8,8 +8,8 @@ export default function MovieListItem(props) {
         <div>
             <li className='list-group-item list-group-item-secondary'>
                 {props.item.title}
-                <img id='delete-icon' src={Delete} />
-                <img id='star-icon' src={Star} />
+                <img src={Delete} />
+                <img src={Star} />
             </li>
         </div>
     )
