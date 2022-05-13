@@ -19,10 +19,12 @@ function App() {
     setMovies(movies.filter((movie) => movie.id != inId));
   }
 
+  {/* Sorts the list alphabetically starting with A */}
   function alphabeticalSort(){
     setMovies([...movies].sort((a,b) => a.title.localeCompare(b.title)));
   }
 
+  {/* Sorts the list largest to smallest based on rating */}
   function ratingSort(){
     setMovies([...movies].sort((a, b) => b.rating - a.rating));
   }

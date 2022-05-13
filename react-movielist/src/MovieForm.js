@@ -21,6 +21,7 @@ export default function MovieForm(props) {
 
             <button className='btn btn-success mt-3' onClick={() => {
 
+                {/* Validates the input to ensure all fields are filled */}
                 if(inputRef.current.value && dropDownRef.current.value != 0)
                 {
                     props.addMovie(inputRef.current.value, dropDownRef.current.value);
