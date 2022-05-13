@@ -12,6 +12,7 @@ export default function MovieList(props) {
             </ul>
 
             <button type="button" class="btn btn-primary" onClick={() => {props.alphabeticalSort()}}>Alfabetsik ordning</button>
+            <button type="button" class="btn btn-primary ms-3" onClick={() => {props.ratingSort()}}>Betygsordning</button>
         </div>
     )
 };

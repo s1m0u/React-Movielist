@@ -11,17 +11,17 @@ function App() {
   {
     id: 2,
     title: "A",
-    rating: 5
+    rating: 2
   },
   {
     id: 3,
     title: "C",
-    rating: 5
+    rating: 4
   },
   {
     id: 4,
     title: "B",
-    rating: 5
+    rating: 1
   }]);
 
   const addMovie = (inTitle, inRating) => {
@@ -42,6 +42,10 @@ function App() {
     setMovies([...movies].sort((a,b) => a.title.localeCompare(b.title)));
   }
 
+  function ratingSort(){
+    setMovies([...movies].sort((a, b) => b.rating - a.rating));
+  }
+
   return (
     <div className="App">
       <h1>Min Filmlista</h1>
@@ -54,7 +58,7 @@ function App() {
       <hr />
 
       {/* List */}
-      <MovieList movies={movies} deleteMovie={deleteMovie} alphabeticalSort={alphabeticalSort}/>
+      <MovieList movies={movies} deleteMovie={deleteMovie} alphabeticalSort={alphabeticalSort} ratingSort={ratingSort}/>
     </div>
   );
 }
