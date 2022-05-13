@@ -1,30 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import MovieForm from "./MovieForm";
 import MovieList from "./MovieList";
 
 function App() {
-  const [movies, setMovies] = useState([{
-    id: 1,
-    title: "Star Wars",
-    rating: 5
-  },
-  {
-    id: 2,
-    title: "A",
-    rating: 2
-  },
-  {
-    id: 3,
-    title: "C",
-    rating: 4
-  },
-  {
-    id: 4,
-    title: "B",
-    rating: 1
-  }]);
+  const [movies, setMovies] = useState([]);
 
-  const addMovie = (inTitle, inRating) => {
+  function addMovie (inTitle, inRating){
     const newId = movies.length > 0 ? movies[movies.length - 1].id +1 : 1;
 
     setMovies([...movies, {
@@ -51,13 +32,8 @@ function App() {
       <h1>Min Filmlista</h1>
       <h3>Lägg till en film</h3>
       <hr />
-
-      {/* Form */}
       <MovieForm addMovie={addMovie} />
-
       <hr />
-
-      {/* List */}
       <MovieList movies={movies} deleteMovie={deleteMovie} alphabeticalSort={alphabeticalSort} ratingSort={ratingSort}/>
     </div>
   );
